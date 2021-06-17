@@ -1,0 +1,25 @@
+type Customer{
+    customerId: ID!
+    customerFirstName:String!
+    customerLastName:String!
+    customer_address:String!
+     customerCity:String!
+     customerState:String!
+     customerZip:String!
+     customerPhone:String!
+     customerFax:String!
+     status:String!
+    hasOrder:[Order]
+}
+
+type Order{
+     orderId:ID!
+     orderDate:String
+     shippedDate:String
+
+}
+
+type Query{
+    findAllCustomers:[Customer]!
+    findOrderByCustomer(customerId:Int):Customer
+}
