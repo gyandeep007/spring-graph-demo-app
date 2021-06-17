@@ -28,7 +28,7 @@ public class SpringGraphDemoApplication {
 
         Query query = context.getBean(Query.class);
        Iterable<Customer> customer= query.findAllCustomers();
-        System.out.println(customer);
+       //        System.out.println(customer);
     }
 
     @Autowired
